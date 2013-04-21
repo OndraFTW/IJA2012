@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<net name="net2" author="jan" description="long varnames" request="save" username="jan" version="1"><place ID="0" x="78" y="55" token="1,2,3" /><place ID="1" x="384" y="54" token="-1,-2,-3" /><place ID="6" x="322" y="371" token="" /><transition ID="3" x="276" y="205" active="false" guard="left&gt;0&amp;right&lt;0\nresult=right-left\n" /><arc ID="4" ID1="0" ID2="3" varname="left" /><arc ID="5" ID1="1" ID2="3" varname="right" /><arc ID="7" ID1="3" ID2="6" varname="result" /></net>

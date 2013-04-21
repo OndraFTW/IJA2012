@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net name="example02" version="n" author="">
+    <place ID="1" x="189" y="146" token="1,2,3,4,6,5"/>
+    <place ID="2" x="32" y="152" token="-1,-2,-3,-4,-5"/>
+    <place ID="6" x="155" y="421" token=""/>
+    <transition ID="3" x="138" y="276" active="false" guard="a&lt;0&amp;b&gt;0\nc=a+b\n"/>
+    <arc ID="4" ID1="2" ID2="3" varname="a"/>
+    <arc ID="5" ID1="1" ID2="3" varname="b"/>
+    <arc ID="7" ID1="3" ID2="6" varname="c"/>
+</net>

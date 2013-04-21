@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="IJA Project" default="ant" basedir=".">
+	
+	<description>
+		IJA Project
+	</description>
+	
+	<target name="ant" depends="compile"/>
+	
+	<target name="clean">
+		<delete dir="build/server"/>
+		<delete dir="build/client"/>
+		<delete dir="build/shared"/>
+		<delete dir="dest-client/ija2012-client.jar"/>
+		<delete dir="dest-client/config.xml"/>
+		<delete dir="dest-server/ija2012-server.jar"/>
+		<delete dir="doc"/>
+		<mkdir dir="doc"/>
+	</target>
+	
+	<target name="compile" depends="clean,doc" description="Compile">
+	
+		<mkdir dir="dest-server"/>
+		<mkdir dir="dest-client"/>
+		
+		<javac srcdir="src" destdir="build" encoding="UTF-8" debug="true" debuglevel="lines,vars,source" includeantruntime="false" classpath="lib/xom-1.2.7.jar">
+			<compilerarg value="-Xlint:unchecked"/>
+		</javac>
+		
+		<jar destfile="dest-client/ija2012-client.jar" basedir="build">
+			<manifest>
+				<attribute name="Main-Class" value="client.Main"/>
+				<attribute name="Class-Path" value="../lib/xom-1.2.7.jar"/>
+			</manifest>
+		</jar>
+		
+		<jar destfile="dest-server/ija2012-server.jar" basedir="build">
+			<manifest>
+				<attribute name="Main-Class" value="server.Main"/>
+				<attribute name="Class-Path" value="../lib/xom-1.2.7.jar"/>
+			</manifest>
+		</jar>
+		
+	</target>
+
+	<target name="client">
+		<java jar="dest-client/ija2012-client.jar" dir="dest-client" fork="true"/>
+	</target>
+	
+	<target name="server">
+		<java jar="dest-server/ija2012-server.jar" dir="dest-server" fork="true" spawn="false"/>
+	</target>
+	
+	<target name="doc">
+		<javadoc sourcepath="src" destdir="doc" encoding="UTF-8" docencoding="UTF-8" charset="UTF-8" classpath="lib/xom-1.2.7.jar"/>
+	</target>
+	
+	<target name="c">
+		<javac srcdir="src" destdir="build" encoding="UTF-8" debug="true" debuglevel="lines,vars,source" includeantruntime="false" classpath="lib/xom-1.2.7.jar">
+			<compilerarg value="-Xlint:unchecked"/>
+		</javac>
+		
+		<jar destfile="dest-client/ija2012-client.jar" basedir="build">
+			<manifest>
+				<attribute name="Main-Class" value="client.Main"/>
+				<attribute name="Class-Path" value="../lib/xom-1.2.7.jar"/>
+			</manifest>
+		</jar>
+		
+		<jar destfile="dest-server/ija2012-server.jar" basedir="build">
+			<manifest>
+				<attribute name="Main-Class" value="server.Main"/>
+				<attribute name="Class-Path" value="../lib/xom-1.2.7.jar"/>
+			</manifest>
+		</jar>
+		
+	</target>
+	
+	<target name="cc" depends="compile">
+		<java jar="dest-client/ija2012-client.jar" dir="dest-client" fork="true"/>
+	</target>
+	
+	<target name="cs" depends="compile">
+		<java jar="dest-server/ija2012-server.jar" dir="dest-server" fork="true"/>
+	</target>
+
+</project>

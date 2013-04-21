@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net name="example01" version="n" author="">
+    <place ID="0" x="86" y="91" token=""/>
+    <place ID="1" x="192" y="97" token=""/>
+    <transition ID="2" x="98" y="187" guard="\n"/>
+    <arc ID="3" ID1="0" ID2="2" varname="a"/>
+    <arc ID="4" ID1="1" ID2="2" varname="b"/>
+</net>

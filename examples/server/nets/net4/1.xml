@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<net name="net4" author="admin" description="" request="save" username="admin" version="1"><place ID="0" x="82" y="109" token="1,-1,8,4" /><transition ID="1" x="82" y="212" active="false" guard="a&gt;=0\nb=0\n" /><arc ID="2" ID1="0" ID2="1" varname="a" /></net>

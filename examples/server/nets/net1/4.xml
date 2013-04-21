@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<net name="net1" author="admin" description="a lot of stuff" request="save" username="admin" version="4"><place ID="0" x="97" y="92" token="" /><place ID="1" x="209" y="99" token="" /><place ID="5" x="118" y="299" token="" /><transition ID="2" x="125" y="207" guard="\n" /><arc ID="3" ID1="0" ID2="2" varname="a" /><arc ID="4" ID1="1" ID2="2" varname="b" /><arc ID="6" ID1="2" ID2="5" varname="c" /></net>

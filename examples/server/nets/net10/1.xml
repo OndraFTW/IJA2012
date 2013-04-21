@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<net name="net10" author="admin" description="two inputs and two conditions" request="save" username="admin" version="1"><place ID="0" x="164" y="108" token="1,1,1" /><place ID="1" x="427" y="122" token="2,2,2" /><place ID="5" x="335" y="478" token="" /><transition ID="2" x="288" y="304" active="false" guard="a==1&amp;b==2\nc=a+b+3\n" /><arc ID="3" ID1="0" ID2="2" varname="a" /><arc ID="4" ID1="1" ID2="2" varname="b" /><arc ID="6" ID1="2" ID2="5" varname="c" /></net>
